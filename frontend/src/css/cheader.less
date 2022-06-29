@@ -1,0 +1,65 @@
+@import "color-scheme";
+
+.tfc-header-container
+{
+    z-index: 100;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .tfc-header-upper
+    {
+        background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: row;
+
+        .tfc-header-pipe, .tfc-header-text, .tfc-header-end
+        {
+            height: 40px;
+        }
+
+        .tfc-header-pipe, .tfc-header-text
+        {
+            background-color: @colorscheme_background_primary;
+        }
+
+        .tfc-header-pipe
+        {
+            img
+            {
+                height: 100%;
+            }
+        }
+
+        .tfc-header-text
+        {
+            color: @colorscheme_font_color_secondary;
+            font-family: @colorscheme_font_family_title;
+
+            display: flex;
+            box-sizing: border-box;
+
+            padding: 11px 0 9px 10px;
+            font-size: 26px;
+
+            align-items: center;
+        }
+
+        .tfc-header-end
+        {
+            fill: @colorscheme_background_primary;
+        }
+    }
+
+    .tfc-header-lower
+    {
+        height: 3px;
+        background-image: linear-gradient(to right, @colorscheme_primary, @colorscheme_secondary);
+    }
+}

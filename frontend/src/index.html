@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tefek's Apps</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style id="preload-style">
+            .preloader-container {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+                flex-direction: column;
+            }
+            
+            .preloader-text {
+                font-size: 24px;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            
+            .mint-spinner {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+        
+            .mint-spinner.spc {
+                width: 64px;
+                height: 64px;
+                animation: 2400ms linear 0s infinite asr;
+            }
+        
+            .mint-spinner.rotator {
+                width: 100%;
+                height: 100%;
+                animation: 1430ms ease-out 0s infinite aslrt;
+            }
+        
+            .mint-spinner.slh {
+                float: left;
+                width: 50%;
+                overflow: hidden;
+                height: 100%;
+            }
+        
+            .mint-spinner.srh {
+                float: right;
+                width: 50%;
+                overflow: hidden;
+                height: 100%;
+            }
+        
+            .mint-spinner.slh .mint-spinner.scc {
+                box-sizing: border-box;
+                
+                width: 200%;
+                height: 100%;
+                border: 5px solid teal;
+                border-radius: 50%;
+                border-right-color: transparent !important;
+                border-bottom-color: transparent !important;
+                animation: 1430ms ease-out 0s infinite asllh, 5000ms ease-in-out 0s infinite rotatecol;
+            }
+        
+            .mint-spinner.srh .mint-spinner.scc {
+                box-sizing: border-box;
+                
+                margin-left: -100%;
+                width: 200%;
+                height: 100%;
+                border: 5px solid teal;
+                border-radius: 50%;
+                border-top-color: transparent !important;
+                border-left-color: transparent !important;
+                animation: 1430ms ease-out 50ms infinite aslrh, 5000ms ease-in-out 0s infinite rotatecol;
+            }
+            
+            @keyframes rotatecol {
+                0% {
+                    border-color: #a100ff;
+                }
+                25% {
+                    border-color: #00bdff;
+                }
+                50% {
+                    border-color: #00ff70;
+                }
+                75% {
+                    border-color: #006fff;
+                }
+                100% {
+                    border-color: #a100ff;
+                }
+            }
+        
+            @keyframes asllh {
+                0% {
+                    transform: rotate(-10deg);
+                }
+                45% {
+                    transform: rotate(130deg);
+                }
+                47% {
+                    transform: rotate(130deg);
+                }
+                100% {
+                    transform: rotate(-10deg);
+                }
+            }
+        
+            @keyframes aslrh {
+                0% {
+                    transform: rotate(-80deg);
+                }
+                45% {
+                    transform: rotate(-220deg);
+                }
+                47% {
+                    transform: rotate(-220deg);
+                }
+                100% {
+                    transform: rotate(-80deg);
+                }
+            }
+        
+            @keyframes aslrt {
+                0% {
+                    transform: rotate(0deg);
+                }
+                45% {
+                    transform: rotate(180deg);
+                }
+                47% {
+                    transform: rotate(180deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        
+            @keyframes asr {
+                0% {
+                    transform: rotate(0deg);
+                }
+                50% {
+                    transform: rotate(180deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="appContainer">
+            <div class="preloader-container">
+                <div class="mint-spinner spc">
+                    <div class="mint-spinner rotator">
+                        <div class="mint-spinner slh">
+                            <div class="mint-spinner scc"></div>
+                        </div>
+                        <div class="mint-spinner srh">
+                            <div class="mint-spinner scc"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="preloader-text-main" class="preloader-text">
+                    Loading...
+                </div>
+            </div>
+        </div>
+        <script>
+            "use strict";
+
+            setTimeout(() => {
+                const preloaderText = document.getElementById("preloader-text-main");
+                
+                if (!preloaderText)
+                    return;
+                
+                preloaderText.innerText = "Please wait... If this takes too long, your browser may not be supported.";
+            }, 2000);
+        </script>
+    </body>
+</html>

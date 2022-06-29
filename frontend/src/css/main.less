@@ -1,0 +1,113 @@
+@import "color-scheme";
+
+body, html
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: @colorscheme_background_tertiary;
+    font-family: sans-serif;
+}
+
+.tfc-app-fsview
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.tfc-app-container
+{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img.tfc-img-inline
+{
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    height: 1em;
+}
+
+.ta-project-container
+{
+    box-sizing: border-box;
+    max-width: 1024px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+
+.ta-project
+{
+    background-color: @colorscheme_background_primary;
+    border-radius: 25px;
+
+    & .ta-project-name
+    {
+        background-color: @colorscheme_primary;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+        height: 45px;
+        font-size: 110%;
+        font-family: @colorscheme_font_family_heading;
+        font-weight: 800;
+        color: @colorscheme_font_color_primary;
+        white-space: nowrap;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    & .ta-project-description
+    {
+        color: @colorscheme_font_color_primary;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        & a
+        {
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: @colorscheme_background_secondary;
+            border-radius: 4px;
+            color: @colorscheme_font_color_secondary;
+            font-family: @colorscheme_font_family_heading;
+            text-decoration: none;
+            border-bottom: 2px solid @colorscheme_font_color_secondary;
+
+            &:hover
+            {
+                color: @colorscheme_font_color_primary;
+                border-bottom: 2px solid @colorscheme_font_color_primary;
+            }
+
+            &:active
+            {
+                color: @colorscheme_primary;
+                border-bottom: 2px solid @colorscheme_primary;
+                background-color: @colorscheme_background_tertiary;
+            }
+        }
+    }
+
+    & .ta-graphic-view
+    {
+        height: 500px;
+    }
+}

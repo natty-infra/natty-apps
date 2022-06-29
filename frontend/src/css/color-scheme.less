@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow&family=Open+Sans:wght@800&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+@colorscheme_font_family_heading: 'Open Sans', sans-serif;
+@colorscheme_font_family_title: 'Pragati Narrow', sans-serif;
+@colorscheme_font_family_text: 'Source Sans Pro', sans-serif;
+
+:root
+{
+    --color-scheme-primary: rgb(255, 120, 96);
+    --color-scheme-secondary: rgb(241, 255, 113);
+    --color-scheme-background-primary: rgb(48, 48, 48);
+    --color-scheme-background-secondary: rgb(21, 21, 21);
+    --color-scheme-background-tertiary: rgb(82, 82, 82);
+    --color-scheme-font-color-primary: rgb(255, 255, 255);
+    --color-scheme-font-color-secondary: rgb(255, 249, 187);
+}
+
+.tfc-light
+{
+    filter: invert();
+}
+
+.tfc-colorized
+{
+    &:hover
+    {
+        filter: invert(0.5) sepia(1.0) saturate(10.0) hue-rotate(20deg) brightness(5.0);
+    }
+
+    &:active
+    {
+        filter: invert(0.5) sepia(1.0) saturate(10.0) brightness(5.0) hue-rotate(-50deg);
+    }
+}
+
+@media (prefers-color-scheme: light)
+{
+    :root
+    {
+        --color-scheme-primary: rgb(247, 128, 3);
+        --color-scheme-secondary: rgb(7, 117, 154);
+        --color-scheme-background-primary: rgb(255, 255, 255);
+        --color-scheme-background-secondary: rgb(240, 240, 240);
+        --color-scheme-font-color-primary: rgb(0, 0, 0);
+        --color-scheme-font-color-secondary: rgb(0, 83, 107);
+        --color-scheme-background-tertiary: rgb(197, 197, 197);
+    }
+
+    .tfc-dark
+    {
+        filter: invert() hue-rotate(180deg) brightness(1.8);
+    }
+
+    .tfc-colorized
+    {
+        filter: invert();
+
+        &:hover
+        {
+            filter: invert(0.9) sepia(1.0) saturate(10.0) hue-rotate(20deg) brightness(5.0);
+        }
+
+        &:active
+        {
+            filter: invert(0.9) sepia(1.0) saturate(10.0) brightness(5.0) hue-rotate(-40deg);
+        }
+    }
+}
+
+@colorscheme_primary: var(--color-scheme-primary);
+@colorscheme_secondary: var(--color-scheme-secondary);
+@colorscheme_background_primary: var(--color-scheme-background-primary);
+@colorscheme_background_secondary: var(--color-scheme-background-secondary);
+@colorscheme_background_tertiary: var(--color-scheme-background-tertiary);
+@colorscheme_font_color_primary: var(--color-scheme-font-color-primary);
+@colorscheme_font_color_secondary: var(--color-scheme-font-color-secondary);
+
+body
+{
+    font-family: @colorscheme_font_family_text;
+}
