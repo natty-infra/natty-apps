@@ -11,7 +11,7 @@ import githubIcon from "../img/social/github.svg";
 import flagCZ from "../img/flag_cz.svg";
 
 export default {
-    appName: "Tefek's Apps",
+    appName: "Natty's Apps",
     appVersion: "1.0.0",
     icons: {
         icon64: icon64,
@@ -21,17 +21,17 @@ export default {
     footer: {
         flag: flagCZ,
         links: [{
-            link: "https://tefek.cz",
-            name: "Tefek.cz"
+            link: "https://natty.sh",
+            name: "Natty.sh"
         }, {
-            link: "https://tefek.cz/supportme",
+            link: "https://natty.sh/supportme",
             name: "Support My Work"
         }, {
-            link: "https://tefek.cz/acknowledgements",
+            link: "https://natty.sh/acknowledgements",
             name: "Open Source"
         }],
         socials: [{
-            link: "https://github.com/493msi",
+            link: "https://github.com/AMNatty",
             type: Social.GITHUB,
             img: githubIcon
         }, {
@@ -39,15 +39,11 @@ export default {
             type: Social.DISCORD,
             img: discordIcon
         }, {
-            link: "https://tefek.cz/contact",
+            link: "https://natty.sh/contact",
             type: Social.EMAIL,
             img: emailIcon
         }, {
-            link: "https://twitter.com/amtefek",
-            type: Social.TWITTER,
-            img: twitterIcon
-        }, {
-            link: "https://www.youtube.com/c/Tefek",
+            link: "https://www.youtube.com/@NattyGfx",
             type: Social.YOUTUBE,
             img: youtubeIcon
         }]

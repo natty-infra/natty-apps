@@ -1,13 +1,12 @@
 {
-  "name": "tefek-apps",
-  "version": "1.0.0",
+  "name": "natty-apps",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
     "start": "webpack serve --config webpack.development.js",
     "build": "webpack --config webpack.production.js"
   },
-  "author": "Tefek",
-  "license": "MIT",
+  "author": "Natty",
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.18.5",
